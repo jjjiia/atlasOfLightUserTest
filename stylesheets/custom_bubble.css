@@ -1,0 +1,67 @@
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #aaa;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+}
+svg circle.dot{
+    fill: green;
+    filter: url(#blur);
+}
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   padding:2px;
+   padding-left:10px;
+   background-color:rbga(0,0,0,.2);
+   background:none;
+   border-radius:0px;
+   color:#fff;
+   width:300px;
+   font-family: 'Dosis', sans-serif;
+   letter-spacing:2px;
+}
+#xAxisData{
+  width:615px;
+  margin-left:110px;
+  margin-top:600px;
+  z-index:999;
+  padding-left:20px;
+}
+#yAxisData{
+    z-index:999;
+  width:430px;
+  position:absolute;
+  top:330px;
+  left:-180px;
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+  padding-left:20px;
+  
+}
+#chartTitle{
+    position:fixed;
+    top:80px;
+    left:20px;
+    font-size:18px;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing:2px;
+}
+#xAxisArrow{
+position:absolute;
+top:615px;
+left:125px;
+    z-index:9999;
+}
+
+#yAxisArrow{
+position:absolute;
+top:540px;
+left:31px;
+    z-index:9999;
+}
