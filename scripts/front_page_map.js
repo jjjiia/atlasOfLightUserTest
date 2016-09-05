@@ -485,21 +485,23 @@ r.domain([1000000,20000000])
 }
 function formatTip(data){
 
-  var formatComma = d3.format("0,000");
-  var formatted = ""
-  for (var i in data){
-    formatted+= i.split("_").join(" ")
-    formatted+= ": "
-      if(isNaN(formatComma(parseFloat(data[i]).toFixed(2)))!=true){
-    formatted+= formatComma(parseFloat(data[i]).toFixed(2))          
-      }
-      else{
-          formatted+=data[i]
-      }
-    formatted+="</br>"
-  }
+    var formatComma = d3.format("0,000");
+    var formatted = ""
+    for (var i in data){
+        if(i.split("_").join(" ")!="name"){
+      formatted+= i.split("_").join(" ")
+      formatted+= ": "          
+        }
+        if(isNaN(formatComma(parseFloat(data[i]).toFixed(2)))!=true){
+      formatted+= formatComma(parseFloat(data[i]).toFixed(2))          
+        }
+        else{
+            formatted+=data[i]
+        }
+      formatted+="</br>"
+    }
   
-  return formatted
+    return formatted
 }
 function tick(centers, varname,data) {
     var nodes = __nodes

@@ -54,8 +54,8 @@ select {
 }
 #xAxisArrow{
 position:absolute;
-top:615px;
-left:125px;
+top:606px;
+left:120px;
     z-index:9999;
 }
 
