@@ -47,9 +47,9 @@ var __map = null
 var  __canvas = null
 var __gridData = null
 
-var originalZoom = 5
-var maxZoom = 16
-var minZoom  = 8
+var originalZoom = 8.5
+var maxZoom = 8.5
+var minZoom  = 8.5
 var currentZoom = null
 
 var currentCenter = center
@@ -119,9 +119,7 @@ function initCanvas(data,zipcodes){
             maxZoom:maxZoom,
             minZoom:minZoom
         });
-       // __map.scrollZoom.disable()
-        __map.addControl(new mapboxgl.Geocoder({position:"bottom-left"}));       
-        __map.addControl(new mapboxgl.Navigation({position:"bottom-left"}));
+        __map.scrollZoom.disable()
     }
     
     var map = __map
